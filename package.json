@@ -1,0 +1,20 @@
+{
+  "name": "RestifyAndSocketAndEventBus",
+  "version": "0.0.0",
+  "description": "RestifyAndSocketAndEventBus",
+  "private": true,
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "bufferstream": "*",
+    "co": "*",
+    "co-control": "*",
+    "cobu-eventbus": "*",
+    "corriera": "^0.1.2",
+    "restify": "*",
+    "socket.io": "*",
+    "thunkify": "*"
+  }
+}

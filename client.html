@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title>Socket-client-html</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="description">
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript">
+        //socket
+        var socket = io.connect(":3000/chat");
+        socket.on('tcp_data',function(data){
+            alert(data);
+        });
+        function funBtnSend(){
+            socket.send('a#1234567890');
+        }
+        function funBtnSend2(){
+            socket.send('1#1234567890');
+        }
+    </script>
+</head>
+<body>
+<input type="button" id="btnSend" value="发送第一次" onclick="funBtnSend()">
+<input type="button" id="btnSend2" value="发送第二次" onclick="funBtnSend2()">
+
+</body>
+</html>
